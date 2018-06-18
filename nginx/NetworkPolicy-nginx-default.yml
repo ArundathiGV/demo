@@ -1,0 +1,18 @@
+---
+kind: "NetworkPolicy"
+apiVersion: "extensions/v1beta1"
+spec:
+  podSelector:
+    matchLabels: {}
+    matchExpressions: []
+  policyTypes:
+  - "Ingress"
+  - "Egress"
+  egress:
+  - {}
+metadata:
+  annotations: {}
+  name: "nginx-default"
+  labels:
+    nirmata.io/networkpolicy.name: "nginx-default"
+    nirmata.io/application.name: "nginx"
