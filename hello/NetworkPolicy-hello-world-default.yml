@@ -15,4 +15,4 @@ metadata:
   name: "hello-world-default"
   labels:
     nirmata.io/networkpolicy.name: "hello-world-default"
-    nirmata.io/application.name: "hello-world-new"
+    nirmata.io/application.name: "hello-world"
