@@ -1,0 +1,20 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  annotations: {}
+  name: "helloworld"
+  labels:
+    nirmata.io/service.name: "helloworld"
+    nirmata.io/application.name: "hello-world"
+    nirmata.io/component: "helloworld"
+spec:
+  externalIPs: []
+  loadBalancerSourceRanges: []
+  type: "ClusterIP"
+  selector:
+    nirmata.io/application.name: "hello-world"
+    nirmata.io/component: "helloworld"
+  ports:
+  - port: 80
+    protocol: "TCP"
