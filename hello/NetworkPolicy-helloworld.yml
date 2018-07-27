@@ -23,5 +23,5 @@ metadata:
   name: "helloworld"
   labels:
     nirmata.io/networkpolicy.name: "helloworld"
-    nirmata.io/application.name: "hello-world"
+    nirmata.io/application.name: "hello-world-new"
     nirmata.io/component: "helloworld"
