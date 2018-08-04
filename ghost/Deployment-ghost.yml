@@ -10,7 +10,7 @@ metadata:
     nirmata.io/component: "ghost"
 spec:
   replicas: 1
-  revisionHistoryLimit: 5
+  revisionHistoryLimit: 4
   selector:
     matchLabels:
       nirmata.io/application.name: "ghost"
