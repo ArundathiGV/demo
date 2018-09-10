@@ -36,7 +36,7 @@ spec:
       nodeSelector: {}
       containers:
       - name: "helloworld"
-        image: "hello-world:1.9"
+        image: "nirmata/hello-world:latest"
         command: []
         args: []
         ports:
