@@ -5,6 +5,8 @@ metadata:
   annotations: {}
   name: "ghost"
   labels:
+    nirmata.io/application.run: "test-ghost"
+    nirmata.io/environment.name: "test"
     nirmata.io/service.name: "ghost"
     nirmata.io/application.name: "ghost"
     nirmata.io/component: "ghost"
@@ -13,6 +15,8 @@ spec:
   loadBalancerSourceRanges: []
   type: "ClusterIP"
   selector:
+    nirmata.io/application.run: "test-ghost"
+    nirmata.io/environment.name: "test"
     nirmata.io/application.name: "ghost"
     nirmata.io/component: "ghost"
   ports:
