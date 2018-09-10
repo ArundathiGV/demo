@@ -2,11 +2,6 @@
 kind: "NetworkPolicy"
 apiVersion: "extensions/v1beta1"
 spec:
-  labels:
-    nirmata.io/networkpolicy.name: "ghost-default"
-    nirmata.io/application.run: "test-ghost"
-    nirmata.io/environment.name: "test"
-    nirmata.io/application.name: "ghost"
   podSelector:
     matchLabels: {}
     matchExpressions: []

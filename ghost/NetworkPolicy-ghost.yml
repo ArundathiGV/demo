@@ -2,16 +2,8 @@
 kind: "NetworkPolicy"
 apiVersion: "extensions/v1beta1"
 spec:
-  labels:
-    nirmata.io/networkpolicy.name: "ghost"
-    nirmata.io/application.run: "test-ghost"
-    nirmata.io/environment.name: "test"
-    nirmata.io/application.name: "ghost"
-    nirmata.io/component: "ghost"
   podSelector:
     matchLabels:
-      nirmata.io/application.run: "test-ghost"
-      nirmata.io/environment.name: "test"
       nirmata.io/application.name: "ghost"
       nirmata.io/component: "ghost"
     matchExpressions: []
@@ -19,13 +11,7 @@ spec:
   - "Ingress"
   - "Egress"
   ingress:
-  - labels:
-      nirmata.io/networkpolicy.name: "ghost"
-      nirmata.io/application.run: "test-ghost"
-      nirmata.io/environment.name: "test"
-      nirmata.io/application.name: "ghost"
-      nirmata.io/component: "ghost"
-    from:
+  - from:
     - namespaceSelector:
         matchLabels:
           nirmata.io/application.name: "ghost"
@@ -35,7 +21,5 @@ metadata:
   name: "ghost"
   labels:
     nirmata.io/networkpolicy.name: "ghost"
-    nirmata.io/application.run: "test-ghost"
-    nirmata.io/environment.name: "test"
     nirmata.io/application.name: "ghost"
     nirmata.io/component: "ghost"

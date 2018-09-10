@@ -6,8 +6,6 @@ metadata:
   name: "ghost"
   labels:
     nirmata.io/deployment.name: "ghost"
-    nirmata.io/application.run: "test-ghost"
-    nirmata.io/environment.name: "test"
     nirmata.io/application.name: "ghost"
     nirmata.io/component: "ghost"
 spec:
@@ -15,8 +13,6 @@ spec:
   revisionHistoryLimit: 5
   selector:
     matchLabels:
-      nirmata.io/application.run: "test-ghost"
-      nirmata.io/environment.name: "test"
       nirmata.io/application.name: "ghost"
       nirmata.io/component: "ghost"
     matchExpressions: []
@@ -26,13 +22,13 @@ spec:
       maxSurge: 1
       maxUnavailable: 0
   template:
+    apiVersion: "v1"
+    kind: "Pod"
     metadata:
       annotations: {}
       name: "ghost"
       labels:
         nirmata.io/deployment.name: "ghost"
-        nirmata.io/application.run: "test-ghost"
-        nirmata.io/environment.name: "test"
         nirmata.io/application.name: "ghost"
         nirmata.io/component: "ghost"
     spec:
